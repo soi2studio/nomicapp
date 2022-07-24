@@ -1,2 +1,2 @@
 # nomicapp
-Nomic Network Biitcoin Sats Calculator
+Nomic Network Bitcoin Sats Calculator
