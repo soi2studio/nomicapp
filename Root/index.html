@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NomicApp.com | Nomic Compound Calculator</title>
+        
+        <!-- SEARCH ENGINE RESULTS -->
+        <meta name="description" content="Calculator application and information links for Nomic Network in the Cosmos ecosystem. Use the compound calculator to project the number of $NOM tokens and Bitcoin Satoshis accrued by staking $NOM tokens, based on user inputs."><!--APPEARS IN SEARCH ENGINE RESULTS-->
+        <meta name="keywords" content="Nomic, Bitcoin, crypto, Cosmos, nomic stakenet, nomic crypto, nomic crypto price, nomic price, nomic cosmos, nomic token, cosmos, cosmos crypto, the cosmos, crypto calculator, crypto calculator app, crypto calculator what if, cosmos calculator, bitcoin calculator, how to earn bitcoin, earn bitcoin exclusively for brave users, ways to earn bitcoin, earn bitcoin, what is nomic crypto?" data-rh="true">
+        <meta name="author" content="www.soi2studio.com"> <!-- signature -->
+        
+        <meta charset="utf-8"/> <!--GLOBAL SUPPORT FOR ALL CHARACTERS AND LANGUAGES-->
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><!-- FIXED SCREEN WIDTH ON MOBILE-->
+        
+        <!--favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+              
+        <!--css & js sheets-->
+        <link id="style2" rel="stylesheet" href="./css/styles-invert.css">
+        <link id="style1" rel="stylesheet" href="./css/styles.css">
+        <script src="./js/scripts.js" defer></script>
+        <script src="https://kit.fontawesome.com/877223e4ee.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        
+        <header class="header">
+            <div id="header-title">
+                <h1>NømicApp</h1><p>.com</p><p class="version">v1.01</p>
+            </div>
+            
+            <div id="header-logo">
+                <img src="images/both-logos-64.png" alt="">
+            </div>
+            <!--<div class="nomic-feed">
+                <h5>$NOM</h5>
+                <div id="nomic-element">$ ???</div>
+            </div> -->
+            <div class="bitcoin-feed">
+                <h5>$BTC</h5>
+                <div id="bitcoin-element"></div>
+            </div>
+            <div class="dark-rel-position">
+                <div class="dark-abs-position">
+                    <label class="switch">
+                        <input type="checkbox" onclick="darkModeToggle()">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+
+            <div class="intro">
+                <p>Unofficial web app for Nomic network: bringing native Bitcoin to the Cosmos.</p>
+                <h4>Staking $NOM earns $BTC. Calculate your Sats!</h4>
+            </div>
+        <section class="surround">    
+            <div class="container">
+                <div class="container-top">
+                    <label class="flex-end" for="nom">$NOM Staked</label>
+                    <div class="flex-end">
+                        <label class="checkbox">Thirdening
+                            <input type="checkbox" id="checkbox" name="checkbox" value="1" checked>
+                        </label>
+                    </div>
+                </div>
+                <input id="nom" name="nom" type="number" min="1" placeholder="Enter your $NOM">
+                <div>
+                    <label for="sats">Sats per $NOM per day</label>
+                    <button class="modal-button" data-modal-target="#modal-1"><i class="fa-solid fa-circle-info" id="sats-info-icon"></i></button>
+                </div>
+                <input id="sats" name="sats" type="number" value="0.05" min="0" placeholder="Please Enter value">
+            </div>
+            
+            <div class="grid-container">
+                <div class="grid-item" id="gridcol1">
+                    <span>
+                        <label for="apr">APR (%)</label>
+                        <button class="modal-button" data-modal-target="#modal-2"><i class="fa-solid fa-circle-info" id="apr-info-icon"></i></button>      
+                    </span>
+                    <input class="input" id="r" name="apr" type="number" value="200" placeholder="Enter">
+                </div>
+                <div class="grid-item" id="gridcol2">
+                    <label for="comp">Compound</label>
+                    <select class="select-box" id="c" name="comp">
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                        <option>Annual</option>
+                    </select>
+                </div>
+                <div class="grid-item" id="gridcol3">
+                    <label for="years">Years</label>
+                    <select class="select-box" id="t" name="years" type="number">
+                        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                    </select>
+                </div>
+            </div> <!-- grid-container -->
+        </section>        
+            <div class="button-container">
+                <button id="calculate-button">CALCULATE</button>         
+            </div> <!-- close container-->
+            
+         <section class="results-container">
+            <div id="results-element"></div> 
+        </section>
+       
+        </main>
+
+        <footer>
+            <div class="footnote">
+                <p>powered by<a class="footer-links" target="_blank" href="https://www.twitter.com/soi2studio">søi2studio</a><a href="https://www.coingecko.com/" target="_blank"><img id="gecko" src="images\coingecko_logo.png"></a></p></div>
+                <div class="contact-icons">
+                <a href="https://www.soi2studio.com" target="_blank"><i class="fa-solid fa-globe" id="wwww-icon"></i></a>
+                <a href="https://www.twitter.com/soi2studio" target="_blank"><i class="fa-brands fa-twitter" id="tw-icon"></i></a>
+                <a href="https://www.facebook.com/soi2studio" target="_blank"><i class="fa-brands fa-facebook-f" id="fb-icon"></i></a>
+                <a href="mailto:contact@soi2studio.com" target="_blank"><i class="fa-solid fa-envelope" id="email-icon"></i></a>
+            </div>
+            <span>
+                <a class="links" target="_blank" href="https://app.nomic.io/#/staking">nomic.io</a>
+                <a class="links" target="_blank" href="https://app.nomic.io/#/staking">Nomic Staking App</a>
+                <a class="links" target="_blank" href="https://blog.nomic.io/nomic-stakenet-launch">Tokenomics</a>
+            </span>
+            <!--<p> Variables such as the rate of Sats accrual are unknown, and the current staking APR for $NOM is likely to decrease significantly over time. This calculator is for entertainment purposes only, and default input values are not intended to indicate future returns.</p>-->
+        </footer>
+
+    </body>
+
+    <!-- modal 1 - sats -->
+    <div class="modal" id="modal-1">
+        <div class="modal-header">
+            <div class="title"><i class="fa-solid fa-circle-info" id="sats-info-icon-mod"></i>Sats Accrual</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">When bridging Bitcoin to nBTC via the Nomic bridge, bridging fees are paid to $NOM stakers. The amount of sats you receive for staking $NOM is dependent on bridging fees and your percentage of total $NOM staked. The bridge is in an experimental phase with high fees and current rate of accrual is not a reliable indicator of future rewards.</div>
+    </div>
+    <!-- modal 2 - apr -->
+    <div class="modal" id="modal-2">
+        <div class="modal-header">
+            <div class="title"><i class="fa-solid fa-circle-info" id="sats-info-icon-mod"></i>APR</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">There is no reliable data yet available to provide precise staking APR. Default APR value will be updated periodically until such data becomes available. Nomic inflationary rewards are subject to annual 'thirdening', whereby staking rewards will decrease by 1/3 on 1st February annually. By default the 'Thirdening'<input type="checkbox" id="checkbox-i" checked> checkbox is checked to account for the thirdening as an average APR over the number of years selected.</div>
+    </div>
+    <!-- modal 3 - errors -->
+    <div class="modal" id="modal3">
+        <div class="modal-header">
+            <div class="title">Error</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body" id="error-element"></div>
+    </div>
+    <!--modal overlay (fits all)-->
+    <div id="overlay"></div>
+</html>
